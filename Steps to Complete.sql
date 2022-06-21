@@ -26,3 +26,21 @@ WITH t_fa AS (SELECT country_code AS fa_country_code,
                     region,
                     income_group
                FROM regions)
+
+SELECT r.r_country_code AS country_code,
+       r.r_country_name AS country_name,
+       r.region AS country_region,
+       fa.fa_year AS year,
+       fa.forest_area_sqkm,
+       la.total_area_sq_mi * 2.59 AS total_area_sqkm,
+	     (fa.forest_area_sqkm * 100) / (la.total_area_sq_mi * 2.59) AS "forest_percent"
+  FROM t_fa AS fa
+  JOIN t_la AS la
+    ON fa.fa_country_code = la.la_country_code
+   AND fa.fa_year = la.la_year
+  JOIN t_r AS r
+    ON fa.fa_country_code = r.r_country_code
+ WHERE fa.fa_year = 1990
+    OR fa.fa_year = 2016
+ ORDER BY r.r_country_name,
+ 	      fa.fa_year;
