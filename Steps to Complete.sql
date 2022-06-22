@@ -45,3 +45,11 @@ SELECT r.r_country_code AS country_code,
     OR fa.fa_year = 2016
  ORDER BY r.r_country_name,
  	      fa.fa_year;
+
+-- I've chosen to select all the data related to name, code and country region from the table "regions", because these are the entities of that table. 
+
+-- So that I could creat the "forest_percent" column, I defined the total area as the divisor and the forest area as the denominator, taking care that both have the 
+-- same unit.
+
+-- Before actually starting to write the code for the project, I read through all the instructions and noticed that the only years it would take would be 1990 and 
+-- 2016. Therefore, when creating the requested view, I used the WHERE clause and selected only the data related to those years.
