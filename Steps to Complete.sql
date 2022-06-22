@@ -5,7 +5,8 @@
 -- 4. In the ‘forestation’ View, include the following:
 -- 4.a) All of the columns of the origin tables
 -- 4.b) A new column that provides the percent of the land area that is designated as forest.
--- 4.c) Keep in mind that the column forest_area_sqkm in the forest_area table and the land_area_sqmi in the land_area table are in different units (square kilometers and square miles, respectively), so an adjustment will need to be made in the calculation you write (1 sq mi = 2.59 sq km).
+-- 4.c) Keep in mind that the column forest_area_sqkm in the forest_area table and the land_area_sqmi in the land_area table are in different units (square kilometers 
+--      and square miles, respectively), so an adjustment will need to be made in the calculation you write (1 sq mi = 2.59 sq km).
 
 CREATE VIEW forestation
 AS
