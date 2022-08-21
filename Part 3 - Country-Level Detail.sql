@@ -57,6 +57,7 @@ SELECT d1.cn1,
  LIMIT 5;
 
 -- C) If countries were grouped by percent forestation in quartiles, which group had the most countries in it in 2016?
+-- I could have used the FLOOR() function, but, at the time, I didn't know about the existence of this function.
 
 WITH percent AS (SELECT country_name,
                         forest_percent,
