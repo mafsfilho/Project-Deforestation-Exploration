@@ -26,8 +26,12 @@ Deforestation Exploration project template.doc
 
 ## Credits
 
-Mauro Pires - CEO & Founder at Obi.tec
+[Mauro Pires][Mauro] - CEO & Founder at Obi.tec
 
 Douglas Miranda - Data Engineer that helped me through the program
 
-Udacity - Platform where I learned everything about SQL
+[Udacity][Udacity] - Platform where I learned everything about SQL
+
+[Mauro]: https://www.linkedin.com/in/mauro-pires-6a284b32/
+
+[Udacity]: https://www.udacity.com
