@@ -17,8 +17,11 @@ You’ve been able to find tables of data online dealing with forestation as wel
 ## Files used
 
 forest_area.csv
+
 land_area.csv
+
 regions.csv
+
 Deforestation Exploration project template.doc
 
 ## Credits
