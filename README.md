@@ -1,12 +1,12 @@
-##Date created
+## Date created
 
 This project started on December 2021
 
-##Project Title
+## Project Title
 
 Deforestation Exploration
 
-##Description
+## Description
 
 You’re a data analyst for ForestQuery, a non-profit organization, on a mission to reduce deforestation around the world and which raises awareness about this important environmental topic.
 
@@ -14,14 +14,14 @@ Your executive director and her leadership team members are looking to understan
 
 You’ve been able to find tables of data online dealing with forestation as well as total land area and region groupings, and you’ve brought these tables together into a database that you’d like to query to answer some of the most important questions in preparation for a meeting with the ForestQuery executive team coming up in a few days. Ahead of the meeting, you’d like to prepare and disseminate a report for the leadership team that uses complete sentences to help them understand the global deforestation overview between 1990 and 2016.
 
-##Files used
+## Files used
 
 forest_area.csv
 land_area.csv
 regions.csv
 Deforestation Exploration project template.doc
 
-##Credits
+## Credits
 
 Mauro Pires - CEO & Founder at Obi.tec
 Douglas Miranda - Data Engineer that helped me through the program
