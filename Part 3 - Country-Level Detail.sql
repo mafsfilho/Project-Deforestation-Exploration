@@ -7,22 +7,22 @@
 -- A) Which 5 countries saw the largest amount decrease in forest area from 1990 to 2016? What was the difference in forest area for each?
 
 WITH data_1990 AS (SELECT country_name AS cn1,
-			                    year,
-			                  	forest_area_sqkm
-			               FROM forestation
-			              WHERE year = 1990),
+			  year,
+			  forest_area_sqkm
+		     FROM forestation
+	            WHERE year = 1990),
 
-			data_2016 AS (SELECT country_name AS cn2,
-			                     year,
-			                  	 forest_area_sqkm
-			                FROM forestation
-			               WHERE year = 2016)
+	data_2016 AS (SELECT country_name AS cn2,
+			     year,
+			     forest_area_sqkm
+			FROM forestation
+		       WHERE year = 2016)
 
 SELECT d1.cn1,
-			 d1.forest_area_sqkm - d2.forest_area_sqkm AS diff
-	FROM data_1990 AS d1
-	JOIN data_2016 AS d2
-		ON d1.cn1 = d2.cn2
+       d1.forest_area_sqkm - d2.forest_area_sqkm AS diff
+  FROM data_1990 AS d1
+  JOIN data_2016 AS d2
+    ON d1.cn1 = d2.cn2
  WHERE d1.forest_area_sqkm > d2.forest_area_sqkm
    AND d1.cn1 != 'World'
  ORDER BY 2 DESC
@@ -32,25 +32,25 @@ SELECT d1.cn1,
 
 WITH data_1990 AS (SELECT country_name AS cn1,
                           country_region,
-			                    year,
-			                  	forest_area_sqkm,
+			  year,
+			  forest_area_sqkm,
                           forest_percent
-			               FROM forestation
-			              WHERE year = 1990),
+		     FROM forestation
+		    WHERE year = 1990),
 
-		 data_2016 AS (SELECT country_name AS cn2,
-			                    year,
-			                    forest_area_sqkm,
-                          forest_percent
-			               FROM forestation
-			              WHERE year = 2016)
+	data_2016 AS (SELECT country_name AS cn2,
+			     year,
+			     forest_area_sqkm,
+                             forest_percent
+			FROM forestation
+		       WHERE year = 2016)
 
 SELECT d1.cn1,
        country_region,
-			 (d1.forest_area_sqkm - d2.forest_area_sqkm) / d1.forest_area_sqkm AS diff
-	FROM data_1990 AS d1
-	JOIN data_2016 AS d2
-		ON d1.cn1 = d2.cn2
+       (d1.forest_area_sqkm - d2.forest_area_sqkm) / d1.forest_area_sqkm AS diff
+  FROM data_1990 AS d1
+  JOIN data_2016 AS d2
+    ON d1.cn1 = d2.cn2
  WHERE d1.forest_percent IS NOT NULL
    AND d1.forest_area_sqkm > d2.forest_area_sqkm
  ORDER BY 3 DESC
@@ -62,9 +62,9 @@ SELECT d1.cn1,
 WITH percent AS (SELECT country_name,
                         forest_percent,
                         CASE WHEN forest_percent > 75 THEN 4
-                 		 	       WHEN forest_percent BETWEEN 50 AND 75 THEN 3
-                 			       WHEN forest_percent BETWEEN 25 AND 50 THEN 2
-                 			       ELSE 1 END AS quartile
+               		     WHEN forest_percent BETWEEN 50 AND 75 THEN 3
+                 	     WHEN forest_percent BETWEEN 25 AND 50 THEN 2
+               		     ELSE 1 END AS quartile
                    FROM forestation
                   WHERE year = 2016
                     AND forest_percent IS NOT NULL
@@ -79,19 +79,19 @@ SELECT quartile,
 -- D) List all of the countries that were in the 4th quartile (percent forest > 75%) in 2016.
 
 WITH percent AS (SELECT country_name,
-                 		    country_region,
+                 	country_region,
                         forest_percent,
                         CASE WHEN forest_percent > 75 THEN 4
-                 		 	       WHEN forest_percent BETWEEN 50 AND 75 THEN 3
-                 			       WHEN forest_percent BETWEEN 25 AND 50 THEN 2
-                 			       ELSE 1 END AS quartile
+                 	     WHEN forest_percent BETWEEN 50 AND 75 THEN 3
+                 	     WHEN forest_percent BETWEEN 25 AND 50 THEN 2
+                 	     ELSE 1 END AS quartile
                    FROM forestation
                   WHERE year = 2016
                     AND forest_percent IS NOT NULL
                   ORDER BY 2 DESC)
 
 SELECT country_name,
-	   country_region,
+       country_region,
        forest_percent
   FROM percent
  WHERE quartile = 4
@@ -106,8 +106,8 @@ WITH countries AS (SELECT fcountry_name,
                              FROM forestation
                             WHERE fa_year = 2016
                               AND fa_country_name = 'United States') AS us_percent
-                   FROM forestation AS f
-                   WHERE fa_year = 2016)
+                     FROM forestation AS f
+                    WHERE fa_year = 2016)
 
 SELECT COUNT(*)
   FROM countries
