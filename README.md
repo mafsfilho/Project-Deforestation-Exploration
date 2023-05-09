@@ -22,7 +22,9 @@ You’ve been able to find tables of data online dealing with forestation as wel
 ### Tradução: 
 Você é um analista de dados da ForestQuery, uma organização sem fins lucrativos, em uma missão de reduzir o desmatamento ao redor do mundo e conscientizar sobre este importante tema.
 
-Sua diretora executiva e a 
+Sua diretora executiva e sua liderança estão procurando entender quais países e regiões ao redor do mundo parecem possuir florestas que estão diminuindo em tamanho, e também quais países e regiões possuem as maiores áreas florestais, tanto em termos de quantidade quanto em termos de porcentagem de área total. A esperança é de que essas descobertas possam ajudar a informar iniciativas, comunicações e alocação de pessoal para alcançar o maior impacto com os poucos recursos preciosos que a organização tem à sua disposição.
+
+Você foi capaz de encontrar tabelas de dados on-line que lidam com o reflorestamento, bem como a área total de terra e os agrupamentos de regiões, e você uniu essas tabelas em um banco de dados que você gostaria de consultar para responder algumas das questões mais importantes em preparação para um encontro com o time de executivos da ForestQuery em alguns dias. À frente da reunião, você gostaria de preparar e divulgar um relatório, para o líder do time, que usa sentenças completas para ajudá-los a entendr o panorama global do desmatamento entre 1990 e 2016.
 
 ## Arquivos usados
 
@@ -36,7 +38,7 @@ Deforestation Exploration project template.doc
 
 ## Agradecimentos
 
-[Mauro Pires][Mauro] - CEO & Founder at Obi.tec
+[Mauro Pires][Mauro] - CEO & Fundador da Obi.tec
 
 [Douglas Miranda][Douglas] - Engenheiro de Dados que me orientou paralelamente durante os estudos
 
