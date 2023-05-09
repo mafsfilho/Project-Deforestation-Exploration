@@ -38,7 +38,7 @@ Deforestation Exploration project template.doc
 
 [Mauro Pires][Mauro] - CEO & Founder at Obi.tec
 
-Douglas Miranda[Douglas] - Engenheiro de Dados que me orientou paralelamente durante os estudos
+[Douglas Miranda][Douglas] - Engenheiro de Dados que me orientou paralelamente durante os estudos
 
 [Udacity][Udacity] - Plataforma onde aprendi tudo o que sei sobre SQL
 
